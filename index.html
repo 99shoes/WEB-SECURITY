@@ -11,6 +11,18 @@
     <p>嗨!我是蕭博文</p>
     <a href="https://memes.tw/maker?q=CAT&from=tag">敢touch?</a>
     <button onclick="click1()">click</button>
-    <script>function click1() { alert("誤觸是不是") }</script>
+    <p >現在時間 :<span id="time_"></span> </p>
+    <script>
+       function click1() { alert("誤觸是不是") }
+        var currentdate = new Date(); 
+        var datetime = document.getElementById('time_');
+        datetime.textContent = "Last Sync: " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+            + currentdate.getSeconds();
+        console.log(datetime)
+    </script>
 </body>
 </html>
